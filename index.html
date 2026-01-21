@@ -288,12 +288,6 @@
         updateStats();   
       }
 
-      function toggleItem(checkbox) {
-        if (checkbox.checked) selectedItems.add(checkbox.value);
-        else selectedItems.delete(checkbox.value);
-        updateStats();
-      }
-
       function updateStats() {
         const count = selectedItems.size;
         let price = 0;
@@ -381,6 +375,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
 
 
 
