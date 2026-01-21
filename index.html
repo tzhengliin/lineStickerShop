@@ -155,7 +155,7 @@
             </div>
           </div>
           <div class="col-md-4 text-end mt-2 mt-md-0">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">查看清單並送出</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal" onclick="updateModalInfo()">查看清單並送出</button>
           </div>
         </div>
       </div>
@@ -169,6 +169,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
+            <div class="bg-light p-3 mb-3 rounded border" style="font-size: 0.95em;">
+                <p class="mb-1"><strong>姓名：</strong> <span id="modal-name-display" class="text-primary"></span></p>
+                <p class="mb-1"><strong>Line ID：</strong> <span id="modal-line-display" class="text-primary"></span></p>
+                <p class="mb-1"><strong>貼圖名稱：</strong> <span id="modal-sname-display"></span></p>
+                <p class="mb-0"><strong>貼圖描述：</strong> <span id="modal-sdesc-display"></span></p>
+            </div>
             <h6>已選項目：</h6>
             <div id="selected-list"></div>
             <hr />
@@ -287,6 +293,20 @@
         input.value = ''; 
         updateStats();   
       }
+      // ★ 新增：將輸入框的資料複製到確認視窗
+      function updateModalInfo() {
+        // 取得輸入框的值
+        const name = document.getElementById('buyer-name').value || '(未填寫)';
+        const line = document.getElementById('buyer-line').value || '(未填寫)';
+        const sName = document.getElementById('stickers-name').value || '(無)';
+        const sDesc = document.getElementById('stickers-desc').value || '(無)';
+
+        // 顯示在 Modal 上
+        document.getElementById('modal-name-display').innerText = name;
+        document.getElementById('modal-line-display').innerText = line;
+        document.getElementById('modal-sname-display').innerText = sName;
+        document.getElementById('modal-sdesc-display').innerText = sDesc;
+      }
 
       function updateStats() {
         const count = selectedItems.size;
@@ -375,6 +395,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
 
 
 
