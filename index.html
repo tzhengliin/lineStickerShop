@@ -331,11 +331,11 @@
         upsellMsg.innerText = "";
 
         if ( count < 8) {
-          upsellMsg.innerText = `★ 目前以 8 張方案計費，還可以再選 ${8 - count} 張！未選滿的張數，會隨機製作有趣貼圖`;
+          upsellMsg.innerText = `★ 目前以 8 張方案計費，還可以再選 ${8 - count} 張！<br>未選滿的張數，會隨機製作有趣貼圖`;
         } else if (count > 8 && count < 16) {
-          upsellMsg.innerText = `★ 目前以 16 張方案計費，還可以再選 ${16 - count} 張！未選滿的張數，會隨機製作有趣貼圖`;
+          upsellMsg.innerText = `★ 目前以 16 張方案計費，還可以再選 ${16 - count} 張！<br>未選滿的張數，會隨機製作有趣貼圖`;
         } else if (count > 16 && count < 24) {
-          upsellMsg.innerText = `★ 目前以 24 張方案計費，還可以再選 ${24 - count} 張！未選滿的張數，會隨機製作有趣貼圖`;
+          upsellMsg.innerText = `★ 目前以 24 張方案計費，還可以再選 ${24 - count} 張！<br>未選滿的張數，會隨機製作有趣貼圖`;
         } else if (count > 40) {
           upsellMsg.innerText = `★ 注意：您已超過最大 40 張方案`;
         }
@@ -397,6 +397,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
 
 
 
