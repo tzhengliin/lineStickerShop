@@ -328,7 +328,7 @@
       function submitData() {
         const name = document.getElementById("buyer-name").value;
         const lineId = document.getElementById("buyer-line").value;
-        const StickerName = document.getElementById("stickers-name").value;
+        const StickersName = document.getElementById("stickers-name").value;
         const StickersDesc = document.getElementById("stickers-desc").value;
 
         if (!name || !lineId) {
@@ -347,7 +347,7 @@
         const orderData = {
           name: name,
           lineId: lineId,
-          StickerName: StickerName,
+          StickersName: StickersName,
           StickersDesc: StickersDesc,
           count: selectedItems.size,
           price: document.getElementById("price-display").innerText,
@@ -381,6 +381,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
 
 
 
