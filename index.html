@@ -122,16 +122,20 @@
         <h4 class="cat-title">買家資料</h4>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label>姓名 (必填)</label>
+            <label>姓名</label>
             <input type="text" id="buyer-name" class="form-control" placeholder="王小明" />
           </div>
           <div class="col-md-6 mb-3">
-            <label>Line ID (必填)</label>
+            <label>Line ID</label>
             <input type="text" id="buyer-line" class="form-control" placeholder="line_id_123" />
           </div>
           <div class="col-md-6 mb-3">
-            <label>貼圖的顯示名稱 (必填)</label>
+            <label>貼圖顯示名稱</label>
             <input type="text" id="stickers-name" class="form-control" placeholder="王小明的生活日常" />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label>貼圖描述</label>
+            <input type="text" id="stickers-desc" class="form-control" placeholder="這是王小明常用的一些日常用語，很高興跟大家分享" />
           </div>
         </div>
       </div>
@@ -325,6 +329,7 @@
         const name = document.getElementById("buyer-name").value;
         const lineId = document.getElementById("buyer-line").value;
         const StickerName = document.getElementById("stickers-name").value;
+        const StickersDesc = document.getElementById("stickers-desc").value;
 
         if (!name || !lineId) {
           alert("請填寫姓名與 Line ID");
@@ -343,6 +348,7 @@
           name: name,
           lineId: lineId,
           StickerName: StickerName,
+          StickersDesc: StickersDesc,
           count: selectedItems.size,
           price: document.getElementById("price-display").innerText,
           selectedItems: Array.from(selectedItems),
@@ -375,5 +381,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
 
 
